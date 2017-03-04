@@ -1,0 +1,65 @@
+body > header {
+    border-bottom: 1px solid #000;
+    background-color: #1e1e1e;
+    background-image: url('../images/pattern.png');
+    background-repeat: repeat;
+
+    .navbar{
+        background-color: #5697C4;
+        background-color: rgba(94, 168, 220, 0.88);
+        border-radius: 0px;
+        height: 45px;
+
+        @media @lt-sm {
+            height: auto;
+        }
+
+        ul{
+            &.navbar-nav{
+                li{
+                    a{
+                        color: #fff;
+                        padding-top: 13px;
+
+                        &:hover, &:focus, &.active{
+                            background-color: darken(#5697C4, 20%);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navbar-right {
+            margin-right: 0;
+        }
+
+        .navbar-toggle{
+            background: darken(#5697C4, 20%);
+            border-color: darken(#5697C4, 20%);
+            color: #fff;
+
+            &:focus, &:hover{
+                background: darken(#5697C4, 10%);
+            }
+
+            .menu{
+                .pull-left;
+                margin-right: 5px;
+            }
+
+            .bars{
+                .pull-left;
+            }
+
+            .icon-bar{
+                background: #fff;
+            }
+        }
+
+        .selectize-control{
+            margin-top: 7px;
+        }
+    }
+
+}

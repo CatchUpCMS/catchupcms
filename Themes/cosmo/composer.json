@@ -1,0 +1,14 @@
+{
+    "name": "xlink/pxcms-cosmo",
+    "type": "pxcms-themes",
+    "description": "Cosmo Theme for Phoenix CMS",
+    "license": "MIT",
+    "authors": [
+        { "name": "xLink", "email": "xLink@cybershade.org" }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "repositories": [
+    ]
+}

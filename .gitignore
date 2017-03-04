@@ -1,0 +1,10 @@
+/vendor
+/node_modules
+.env
+storage/debugbar/
+config/cms.*.php
+database/migrations/
+!resources/lang/en/
+resources/lang/*
+storage/
+/.idea

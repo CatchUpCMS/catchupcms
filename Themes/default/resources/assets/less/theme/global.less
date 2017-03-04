@@ -1,0 +1,79 @@
+// Core variables and mixins
+@import "../../vendor/bootstrap/less/grid.less";
+@import "../../vendor/bootstrap/less/variables.less";
+@import "../variables.less";
+@import "../../vendor/bootstrap/less/mixins.less";
+
+// global body
+body {
+    padding-top: 70px;
+}
+
+.site-container {
+    .container;
+    margin: 0px auto;
+    float: none;
+    height: auto;
+    overflow: hidden;
+
+    min-height: 500px;
+
+    @media @lt-sm {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// grid me up!
+section.one-column {
+    main.content {
+        .make-md-column(12);
+    }
+}
+
+section.two-column-left {
+    aside.sidebar-left {
+        @media @lt-sm {
+           .make-row();
+        }
+
+        .make-md-column(3);
+    }
+    main.content {
+        .make-md-column(9);
+    }
+}
+
+section.two-column-right {
+    main.content {
+        .make-md-column(9);
+    }
+    aside.sidebar-right {
+        .make-row();
+        .make-md-column(3);
+    }
+}
+
+section.three-column {
+    aside.sidebar-left {
+        .make-row();
+        .make-md-column(3);
+    }
+    main.content {
+        .make-md-column(6);
+    }
+    aside.sidebar-right{
+        .make-row();
+        .make-md-column(3);
+    }
+}
+
+// bootstrap fixes
+.modal-backdrop {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    position: fixed;
+}

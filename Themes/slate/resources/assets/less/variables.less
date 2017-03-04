@@ -1,0 +1,42 @@
+/** Easy Media Queries **/
+
+@highdensity:   ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+                ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+                ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+                ~"only screen and (min-device-pixel-ratio: 1.5)";
+
+@lt-xs:         ~"only screen and (max-width: @{screen-xs-max})";
+@gt-xs:         ~"only screen and (min-width: @{screen-xs-min})";
+@only-xs:       ~"only screen and (min-width: @{screen-xs-min} and max-width: @{screen-xs-max})";
+@lt-sm:         ~"only screen and (max-width: @{screen-sm-max})";
+@gt-sm:         ~"only screen and (min-width: @{screen-sm-min})";
+@only-sm:       ~"only screen and (min-width: @{screen-sm-min} and max-width: @{screen-sm-max})";
+@lt-md:         ~"only screen and (max-width: @{screen-md-max})";
+@gt-md:         ~"only screen and (min-width: @{screen-md-min})";
+@only-md:       ~"only screen and (min-width: @{screen-md-min} and max-width: @{screen-md-max})";
+@lt-lg:         ~"only screen and (max-width: @{screen-lg})";
+@gt-lg:         ~"only screen and (min-width: @{screen-lg-min})";
+@only-lg:       ~"only screen and (min-width: @{screen-lg-min} and max-width: @{screen-lg})";
+
+@lt-phone:      ~"only screen and (min-width: @{screen-xs-min} and max-width: @{screen-xs-max})";
+@on-phone:      ~"only screen and (max-width: @{screen-sm-max})";
+@gt-phone:      ~"only screen and (min-width: @{screen-sm-max})";
+@only-phone:    ~"only screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
+
+@lt-tablet:     ~"only screen and (min-width: @{screen-xs-min}) and (max-width: @{screen-sm-max})";
+@on-tablet:     ~"only screen and (max-width: @{screen-md-max})";
+@gt-tablet:     ~"only screen and (min-width: @{screen-md-min})";
+@only-tablet:   ~"only screen and (min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
+
+@lt-desktop:    ~"only screen and (min-width: @{screen-xs-min} and max-width: @{screen-md})";
+@on-desktop:    ~"only screen and (min-width: @{screen-lg})";
+@gt-desktop:    @on-desktop;
+@only-desktop:  @on-desktop;
+
+@print:         ~"print";
+
+/** BS3 Variable Overrides Only **/
+
+@text-light-bg: #A1A6AF;
+@text-dark-bg: #333;
+@bg-dark: #252525;

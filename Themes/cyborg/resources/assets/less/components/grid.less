@@ -1,0 +1,55 @@
+
+// grid me up!
+section main.content {
+    .clearfix;
+}
+
+section.one-column {
+    .make-xs-column(12);
+    main.content {
+        .make-xs-column(12);
+    }
+}
+
+section.two-column-left {
+    .make-xs-column(12);
+
+    aside.sidebar-left {
+        .make-xs-column(12);
+        .make-md-column(3);
+    }
+    main.content {
+        .make-xs-column(12);
+        .make-md-column(9);
+    }
+}
+
+section.two-column-right {
+    .make-xs-column(12);
+
+    main.content {
+        .make-xs-column(12);
+        .make-md-column(9);
+    }
+    aside.sidebar-right {
+        .make-xs-column(12);
+        .make-md-column(3);
+    }
+}
+
+section.three-column {
+    .make-xs-column(12);
+
+    aside.sidebar-left {
+        .make-xs-column(12);
+        .make-md-column(3);
+    }
+    main.content {
+        .make-xs-column(12);
+        .make-md-column(6);
+    }
+    aside.sidebar-right{
+        .make-xs-column(12);
+        .make-md-column(3);
+    }
+}

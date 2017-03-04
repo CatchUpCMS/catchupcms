@@ -1,0 +1,40 @@
+.panel-permissions {
+    .tab-content {
+        padding: 0 10px;
+    }
+
+    .permission-row {
+        margin-bottom: 5px;
+    }
+    .permission-row:hover {
+        background-color: #F5F5F5;
+    }
+
+    .permissions-nav {
+        &:not(.module) > .nav {
+            border-left: 1px solid #DDD;
+        }
+
+        > .nav {
+            border-right: 1px solid #DDD;
+            background-color: #F5F5F5;
+            min-height: 400px;
+
+            &.nav-stacked > li {
+                &.active {
+                    > a, > a:hover, > a:focus {
+                        background-color: #DDD;
+                        color: #444;
+                    }
+                }
+
+                &.disabled {
+                    padding-left: 10px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}

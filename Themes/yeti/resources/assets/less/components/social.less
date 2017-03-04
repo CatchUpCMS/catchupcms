@@ -1,0 +1,23 @@
+.social {
+    font-size: 16px;
+
+    i.fa {
+        font-size: 18px;
+    }
+
+    &.social-facebook { .social-link(#3B5998); }
+    &.social-twitter { .social-link(#55ACEE); }
+    &.social-github { .social-link(#444444); }
+    &.social-google { .social-link(#DD4B39); }
+}
+
+
+.social-link(@color: #000000) {
+    color: #fff;
+    background-color: @color;
+
+    &:hover {
+        color: #fff;
+        background-color: darken(@color, 10%);
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "xlink/pxcms-cyborg",
+    "type": "pxcms-themes",
+    "description": "Cyborg Theme for Phoenix CMS",
+    "license": "MIT",
+    "authors": [
+        { "name": "xLink", "email": "xLink@cybershade.org" }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "repositories": [
+    ]
+}

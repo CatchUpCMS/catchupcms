@@ -1,0 +1,70 @@
+// Core variables and mixins
+@import "../../vendor/bootstrap/less/grid.less";
+@import "../../vendor/bootstrap/less/variables.less";
+@import "../variables.less";
+@import "../../vendor/bootstrap/less/mixins.less";
+
+// global body
+body {
+    color: #000000;
+    background-color: #D7D6D6;
+    background-image: url('../images/pattern.png');
+    background-repeat: repeat;
+}
+
+.site-container {
+    .container;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+
+    background-color: #ffffff;
+    min-height: 100vh;
+
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+// bootstrap fixes
+.modal-backdrop {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    position: fixed;
+}
+
+
+ol.breadcrumb:empty {
+    display: none;
+}
+
+section.page-header {
+    // float: left;
+    height: auto;
+    background-image: url("../images/bghead.png");
+    background-repeat: repeat;
+    padding-bottom: 36px;
+    text-align: center;
+
+    h1 {
+        padding: 30px 0px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+div.logo{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    text-indent: -9999em;
+    font-size: 30px;
+    padding: 25px 0 0 5px;
+    width: 320px;
+    height: 70px;
+    background: url('../images/logo.png') no-repeat 0 10px;
+}

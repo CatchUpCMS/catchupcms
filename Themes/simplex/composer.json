@@ -1,0 +1,16 @@
+{
+    "name": "xlink/pxcms-amelia",
+    "type": "pxcms-themes",
+    "description": "Cybershade.org Theme for Phoenix CMS",
+    "license": "MIT",
+    "authors": [
+        { "name": "xLink", "email": "xLink@cybershade.org" }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "composer/installers" : "dev-master"
+    },
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/cysha/installers" }
+    ]
+}
