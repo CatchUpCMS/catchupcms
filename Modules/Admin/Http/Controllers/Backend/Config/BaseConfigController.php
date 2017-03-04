@@ -34,7 +34,7 @@ class BaseConfigController extends BaseAdminController
         }
 
         if (count($failed)) {
-            return redirect()->back()->withError('Config Save partially failed. The following keys could not be saved: <ul><li>'.implode('</li><li>', $setting).'</li></ul>');
+            return redirect()->back()->withError('Config Save partially failed. The following keys could not be saved: <ul><li>' . implode('</li><li>', $setting) . '</li></ul>');
         }
 
         return redirect()->back()->withInfo('Config Saved');

@@ -6,7 +6,7 @@ return [
 
     'events' => [
         'before' => function ($theme) {
-            $theme->setTitle(config('app.name').' Admin Panel');
+            $theme->setTitle(config('app.name').' Flatly');
 
             // Breadcrumb template.
             $theme->breadcrumb()->setTemplate(
@@ -30,7 +30,7 @@ return [
 
         // add dropdown-menu classes and such for the bootstrap toggle
         'beforeRenderTheme' => function ($theme) {
-            $navService = (new \Cms\Modules\Core\Services\NavigationService());
+            $navService = (new \Modules\Core\Services\NavigationService());
 
             // grab the navigations
             $navService->boot();

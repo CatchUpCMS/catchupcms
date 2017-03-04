@@ -22,19 +22,19 @@ class DebugSetCommand extends Command
 
         switch ($newSetting) {
             case null :
-                $this->info('Debug Turned: '.(!$configValue ? 'On' : 'Off'));
+                $this->info('Debug Turned: ' . (!$configValue ? 'On' : 'Off'));
                 save_config_var($settingStr, (!$configValue ? 'true' : 'false'));
-            break;
+                break;
 
             case true :
                 $this->info('Debug Turned: On');
                 save_config_var($settingStr, 'true');
-            break;
+                break;
 
             case false :
                 $this->info('Debug Turned: Off');
                 save_config_var($settingStr, 'false');
-            break;
+                break;
         }
         $this->callSilent('cache:clear');
     }

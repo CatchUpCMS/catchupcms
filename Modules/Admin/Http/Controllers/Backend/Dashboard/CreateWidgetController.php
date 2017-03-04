@@ -29,7 +29,7 @@ class CreateWidgetController extends BaseAdminController
             return redirect()->route('admin.widget.update', [
                 'admin_widget_id' => $widget->id,
             ])
-            ->withInfo('Widget instance created, edit options here.');
+                ->withInfo('Widget instance created, edit options here.');
         }
 
         return redirect()->back()

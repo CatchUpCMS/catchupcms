@@ -15,8 +15,8 @@ class Widgets
         $github = json_decode($response->getBody(), true);
 
         $currentVersion = 'Unknown';
-        if (File::exists(base_path().'/.git/FETCH_HEAD')) {
-            $currentVersion = substr(File::get(base_path().'/.git/FETCH_HEAD'), 0, 40);
+        if (File::exists(base_path() . '/.git/FETCH_HEAD')) {
+            $currentVersion = substr(File::get(base_path() . '/.git/FETCH_HEAD'), 0, 40);
         }
 
         $view->with('info', [

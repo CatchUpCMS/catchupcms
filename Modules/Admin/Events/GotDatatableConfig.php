@@ -14,7 +14,7 @@ class GotDatatableConfig
      * Create a new event instance.
      *
      * @param string $key
-     * @param mixed  $value
+     * @param mixed $value
      */
     public function __construct($config)
     {

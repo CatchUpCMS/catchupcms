@@ -28,7 +28,7 @@ class BackendCreateNavigationRequest extends Request
         $tblPrefix = config('cms.admin.table-prefix', 'core_');
 
         return [
-            'name' => ['required', Rule::unique($tblPrefix.'navigation')->ignore($this->name, 'name')],
+            'name' => ['required', Rule::unique($tblPrefix . 'navigation')->ignore($this->name, 'name')],
             'class' => 'string',
         ];
     }

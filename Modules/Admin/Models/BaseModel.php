@@ -11,6 +11,6 @@ class BaseModel extends CoreBaseModel
         parent::__construct();
 
         $prefix = config('cms.admin.config.table-prefix', 'admin_');
-        $this->table = $prefix.$this->table;
+        $this->table = $prefix . $this->table;
     }
 }

@@ -163,7 +163,7 @@ class ModuleManager
                                 'btn-class' => 'btn btn-xs btn-labeled btn-danger',
                                 'btn-icon' => 'fa fa-lock',
                                 'btn-method' => 'post',
-                                'btn-extras' => 'data-remote="true" data-confirm="Are you sure you want to disable '.array_get($model, 'name', null).'?" data-disable-with="<i class=\'fa fa-refresh fa-spin\'></i>"',
+                                'btn-extras' => 'data-remote="true" data-confirm="Are you sure you want to disable ' . array_get($model, 'name', null) . '?" data-disable-with="<i class=\'fa fa-refresh fa-spin\'></i>"',
                                 'hasPermission' => 'module.toggle@admin_modules',
                             ];
                         } else {
@@ -173,7 +173,7 @@ class ModuleManager
                                 'btn-class' => 'btn btn-xs btn-labeled btn-success',
                                 'btn-icon' => 'fa fa-unlock',
                                 'btn-method' => 'post',
-                                'btn-extras' => 'data-remote="true" data-confirm="Are you sure you want to enable '.array_get($model, 'name', null).'?" data-disable-with="<i class=\'fa fa-refresh fa-spin\'></i>"',
+                                'btn-extras' => 'data-remote="true" data-confirm="Are you sure you want to enable ' . array_get($model, 'name', null) . '?" data-disable-with="<i class=\'fa fa-refresh fa-spin\'></i>"',
                                 'hasPermission' => 'module.toggle@admin_modules',
                             ];
                         }

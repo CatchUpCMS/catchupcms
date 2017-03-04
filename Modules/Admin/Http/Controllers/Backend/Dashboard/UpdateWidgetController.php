@@ -27,7 +27,7 @@ class UpdateWidgetController extends BaseAdminController
         // split it into module and view
         list($module, $view) = explode('::', $view);
 
-        return $this->setView($view, [], 'module:'.$module);
+        return $this->setView($view, [], 'module:' . $module);
     }
 
     public function postForm(Widget $widget, Request $request)
