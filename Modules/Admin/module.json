@@ -1,0 +1,26 @@
+{
+    "name": "Admin",
+    "alias": "admin",
+    "description": "Administration Module for Phoenix CMS",
+    "authors": [
+        { "name": "xLink (Dan Aldridge)", "email": "xLink@cybershade.org" }
+    ],
+    "keywords": [
+        "core-module"
+    ],
+    "version": "v1.0.0",
+    "active": 1,
+    "order": 2,
+    "providers": [
+        "Modules\\Admin\\Providers\\AdminModuleServiceProvider",
+        "Modules\\Admin\\Providers\\AdminRoutingProvider",
+        "Modules\\Admin\\Providers\\AdminEventsProvider",
+        "Modules\\Admin\\Providers\\AdminServicesProvider"
+    ],
+    "aliases":{
+    },
+    "files": [
+        "start.php",
+        "helpers.php"
+    ]
+}

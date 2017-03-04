@@ -1,0 +1,30 @@
+{
+    "name": "Auth",
+    "alias": "auth",
+    "description": "Auth Module for Phoenix CMS v1",
+    "authors": [
+        { "name": "xLink (Dan Aldridge)", "email": "xLink@cybershade.org" }
+    ],
+    "keywords": [
+        "core-module"
+    ],
+    "version": "v1.0.0",
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Auth\\Providers\\CustomLockServiceProvider",
+        "Modules\\Auth\\Providers\\AuthModuleServiceProvider",
+        "Modules\\Auth\\Providers\\AuthEventsProvider",
+        "Modules\\Auth\\Providers\\AuthRoutingProvider",
+        "Modules\\Auth\\Providers\\AuthServicesProvider"
+    ],
+    "aliases": {
+        "Lock": "BeatSwitch\\Lock\\Integrations\\Laravel\\Facades\\Lock",
+        "LockManager": "BeatSwitch\\Lock\\Integrations\\Laravel\\Facades\\LockManager",
+        "Recaptcha": "Greggilbert\\Recaptcha\\Facades\\Recaptcha"
+    },
+    "files": [
+        "start.php",
+        "helpers.php"
+    ]
+}

@@ -1,0 +1,35 @@
+<?php
+
+namespace Modules\Auth\Http\Controllers\Frontend\ControlPanel;
+
+use Modules\Auth\Http\Requests\FrontendSettingsRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+
+class SettingsController extends BaseController
+{
+    public function getForm()
+    {
+        $data = $this->getUserDetails();
+        $this->theme->breadcrumb()->add('Account Settings', route('pxcms.user.settings'));
+
+        return $this->setView('controlpanel.settings', $data);
+    }
+
+    public function postForm(FrontendSettingsRequest $input)
+    {
+        $fields = $input->only(['username', 'name', 'use_nick', 'email']);
+
+        $user = Auth::user();
+
+        $user->hydrateFromInput($fields);
+
+        if ($user->save() === false) {
+            return redirect()->back()->withError('Error: Settings cannot be saved, please try again.');
+        }
+
+        Session::forget('actions.check_email');
+
+        return redirect()->back()->withInfo('Settings Saved Successfully.');
+    }
+}

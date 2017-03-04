@@ -1,0 +1,19 @@
+{
+    "name": "cysha/module-admin",
+    "type": "pxcms-module",
+    "description": "Administration Module for Phoenix CMS",
+    "license": "MIT",
+    "authors": [
+        { "name": "xLink (Dan Aldridge)", "email": "xLink@cybershade.org" }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "composer/installers": "dev-master",
+
+        "yajra/laravel-datatables-oracle": "~6.0",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/cysha/installers" }
+    ]
+}
