@@ -1,0 +1,88 @@
+<?php
+
+namespace Modules\Core\Services;
+
+use Modules\Core\Models\Navigation;
+use Menu\Menu;
+
+class NavigationService
+{
+    public function boot()
+    {
+        // setup the navs from the DB
+        $this->setupDBNavs();
+
+        // apply the bootstrap styling to the list navs
+        $this->applyListNavs([
+            'frontend_user_controlpanel',
+        ]);
+
+        $this->stylizeInlineNavs();
+    }
+
+    public function setupDBNavs()
+    {
+        $navigation = (new Navigation())
+            ->with('links')
+            ->has('links')
+            ->get();
+
+        // make sure we have a navigation first
+        if (!$navigation->count()) {
+            return;
+        }
+
+        $callback = function ($children, $item) {
+            $url = $item->url;
+            if ($item->route !== null && !empty($item->route)) {
+                $url = route($item->route);
+            }
+
+            $children->add($url, $item->title);
+        };
+
+        $navigation->each(function ($nav) use ($callback) {
+            Menu::handler($nav->name)
+                ->class($nav->class)
+                ->hydrate($nav->links->sortBy('order'), $callback, 'id', 'parent_id');
+        });
+    }
+
+    public function applyListNavs($menus = [])
+    {
+        collect($menus)->each(function ($nav) {
+            Menu::handler($nav)
+                ->addClass('list-group no-style')
+                ->getItemsByContentType('Menu\Items\Contents\Link')
+                ->map(function ($item) {
+
+                    $class = 'list-group-item';
+                    if ($item->isActive()) {
+                        $class .= ' active';
+                    }
+
+                    $item
+                        ->setElement(null)
+                        ->getContent()
+                        ->addClass($class);
+                });
+        });
+    }
+
+    public function stylizeInlineNavs()
+    {
+        // grab the inline navs
+        $menuKeys = [];
+        foreach (get_array_column(config('cms'), 'menus') as $menus) {
+            $menuKeys = array_merge($menuKeys, array_keys($menus));
+        }
+        $menuKeys = array_unique($menuKeys);
+        $menuKeys = array_filter($menuKeys, function ($name) {
+            return preg_match('/(back|front)end_.*_menu/', $name);
+        });
+
+        foreach ($menuKeys as $key) {
+            Menu::handler($key)->addClass('nav nav-list');
+        }
+    }
+}

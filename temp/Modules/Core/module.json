@@ -1,0 +1,38 @@
+{
+    "name": "Core",
+    "alias": "core",
+    "description": "Core Module for Phoenix CMS v1",
+    "authors": [
+        { "name": "xLink (Dan Aldridge)", "email": "xLink@cybershade.org" }
+    ],
+    "keywords": [
+        "core-module"
+    ],
+    "version": "v1.0.0",
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Core\\Providers\\CoreModuleServiceProvider",
+        "Modules\\Core\\Providers\\CmsConfigProvider",
+        "Modules\\Core\\Providers\\CoreRoutingProvider",
+        "Dingo\\Api\\Provider\\LaravelServiceProvider",
+        "Collective\\Html\\HtmlServiceProvider",
+        "Teepluss\\Theme\\ThemeServiceProvider",
+        "Mews\\Purifier\\PurifierServiceProvider",
+        "Former\\FormerServiceProvider",
+        "Menu\\MenuServiceProvider"
+    ],
+    "aliases": {
+        "HTML": "Collective\\Html\\HtmlFacade",
+        "Form": "Collective\\Html\\FormFacade",
+        "Former": "Former\\Facades\\Former",
+        "Theme": "Teepluss\\Theme\\Facades\\Theme",
+        "Purifier": "Mews\\Purifier\\Facades\\Purifier",
+        "Menu": "Menu\\Menu"
+    },
+    "files": [
+        "start.php",
+        "helpers.php",
+        "macros.php"
+    ]
+}
