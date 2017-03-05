@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'name' => 'default',
-    'inherit' => '',
+    'name' => 'flatly',
+    'inherit' => 'default',
 
     'events' => [
         'before' => function ($theme) {
-            $theme->setTitle(config('app.name').' (Default)');
+            $theme->setTitle(config('app.name').' Flatly');
 
             // Breadcrumb template.
             $theme->breadcrumb()->setTemplate(

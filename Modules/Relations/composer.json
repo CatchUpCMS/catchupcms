@@ -1,0 +1,15 @@
+{
+    "name": "cysha/relations",
+    "description": "",
+    "authors": [
+        {
+            "name": "User",
+            "email": "user@cybershade.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\Relations\\": ""
+        }
+    }
+}
