@@ -15,6 +15,11 @@ class BaseFrontendController extends BaseController
 
     public function boot()
     {
+
+        // reset the themeName to whatever is in the config
+        $this->setTheme(config('cms.core.app.themes.frontend', 'default'));
+
+
         // set the sidebar
         if ($this->sidebar === null) {
             $this->setSidebar('default');

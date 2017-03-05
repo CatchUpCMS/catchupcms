@@ -25,13 +25,13 @@ return [
         },
 
         'asset' => function ($theme) {
-            $themeName = config('cms.core.app.themes.frontend');
+            $themeName = 'darkly';
             $theme->add('css', 'themes/'.$themeName.'/css/app.css');
             $theme->add('js', 'themes/'.$themeName.'/js/all.js');
         },
 
         'beforeRenderTheme' => function ($theme) {
-            $navService = (new \Cms\Modules\Core\Services\NavigationService());
+            $navService = (new \Modules\Core\Services\NavigationService());
 
 
             // grab the navigations

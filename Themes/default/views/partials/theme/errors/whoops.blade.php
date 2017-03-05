@@ -5,6 +5,6 @@
 
     <div>
         <p>{{ $message ?: 'Whoops, looks like something went wrong.' }}</p>
-        <a href="/" class="btn btn-info"><i class="fa fa-home"></i> Back Home</a>
+        <a href="{{ route('pxcms.pages.home') }}" class="btn btn-info"><i class="fa fa-home"></i> Back Home</a>
     </div>
 </div>

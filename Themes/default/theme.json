@@ -1,8 +1,8 @@
 {
-    "name": "default",
-    "author": "Twitter Bootstrap 3",
-    "description": "Default Bootstrap Theme for Phoenix CMS",
+    "name": "default_admin",
+    "author": "Start Bootstrap",
+    "description": "Default Admin Bootstrap Theme for Phoenix CMS",
     "site": "http://cysha.co.uk",
-    "type": "frontend",
+    "type": "backend",
     "version": "1.0"
 }

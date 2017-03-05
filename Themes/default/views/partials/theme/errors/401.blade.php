@@ -5,6 +5,6 @@
 
     <div>
         <p>Authentication is required to access this resource.</p>
-        <a href="/" class="btn btn-info"><i class="fa fa-home"></i> Back Home</a>
+        <a href="{{ route('pxcms.pages.home') }}" class="btn btn-info"><i class="fa fa-home"></i> Back Home</a>
     </div>
 </div>

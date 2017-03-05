@@ -1,10 +1,10 @@
 {
-    "name": "cysha/theme-default",
+    "name": "cysha/theme-default-admin",
     "type": "pxcms-themes",
-    "description": "Default Theme for Phoenix CMS",
+    "description": "Default Admin Theme for Phoenix CMS",
     "license": "MIT",
     "authors": [
-        { "name": "xLink (Dan Aldridge)", "email": "xLink@cybershade.org" }
+        { "name": "xLink", "email": "xLink@cybershade.org" }
     ],
     "minimum-stability": "dev",
     "require": {

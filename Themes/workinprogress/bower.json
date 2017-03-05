@@ -1,0 +1,16 @@
+{
+  "name": "default",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "/resources/vendor",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": ">= 1.9.1",
+    "bootstrap": "~3.3.4",
+    "font-awesome": "~4.3.0",
+    "prism": "*"
+  }
+}

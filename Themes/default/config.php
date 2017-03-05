@@ -2,13 +2,11 @@
 
 return [
     'name' => 'default',
-    'inherit' => null, //default
+    'inherit' => '',
 
     'events' => [
-
         'before' => function ($theme) {
-            // You can remove this line anytime.
-            $theme->setTitle(config('app.name'));
+            $theme->setTitle(config('app.name').' (Default)');
 
             // Breadcrumb template.
             $theme->breadcrumb()->setTemplate(
@@ -30,11 +28,32 @@ return [
             $theme->add('js', 'themes/'.$themeName.'/js/all.js');
         },
 
+        // add dropdown-menu classes and such for the bootstrap toggle
         'beforeRenderTheme' => function ($theme) {
             $navService = (new \Modules\Core\Services\NavigationService());
 
             // grab the navigations
             $navService->boot();
+
+            // theme specific nav stuff
+            Menu::handler('frontend_sidebar')->addClass('nav')->id('side-menu');
+
+            Menu::handler('frontend_sidebar')
+                ->getAllItemLists()
+                ->map(function ($itemList) {
+                    if ($itemList->getParent() !== null && $itemList->hasChildren()) {
+                        $itemList->addClass('nav nav-second-level');
+                    }
+                });
+
+            // add dropdown class to the li if the set has children
+            Menu::handler('frontend_sidebar')
+                ->getItemsByContentType('Menu\Items\Contents\Link')
+                ->map(function ($item) {
+                    if ($item->hasChildren()) {
+                        $item->getValue()->addClass('text-center title');
+                    }
+                });
 
         },
     ],
