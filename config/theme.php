@@ -62,7 +62,7 @@ return array(
     'containerDir' => array(
         'layout' => 'layouts',
         'asset' => 'assets',
-        'partial' => 'views/partials',
+        'partial' => 'partials',
         'widget' => 'widgets',
         'view' => 'views',
     ),
