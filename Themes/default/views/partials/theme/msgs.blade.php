@@ -2,6 +2,10 @@
                 <div class="alert alert-success"><strong>Success:</strong> {{ $message }} </div>
             @endif
 
+            @if (config('cms.core.app.maintenance', 'false') == 'true')
+                <div class="alert alert-warning"><strong>Warning:</strong> {{ trans('admin::site.maintenance') }} </div>
+            @endif
+
             <?php
                 if (Session::has('error') && count(Session::get('error'))) {
                     $error = Session::get('error');

@@ -9,7 +9,7 @@ class BaseFrontendController extends BaseController
      *
      * @var string
      */
-    public $layout = '3-column';
+    public $layout = '1-column';
 
     public $sidebar = null;
 
@@ -17,7 +17,7 @@ class BaseFrontendController extends BaseController
     {
 
         // reset the themeName to whatever is in the config
-        $this->setTheme(config('cms.core.app.themes.frontend', 'default'));
+        $this->setTheme(config('cms.core.app.themes.frontend', 'flatly'));
 
 
         // set the sidebar
